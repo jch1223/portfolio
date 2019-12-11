@@ -1,13 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  incrementCount,
-  decrementCount,
-  resetCount
-} from "../store/modules/index";
+import { incrementCount, decrementCount, resetCount } from "../store/modules";
 
 export default () => {
-  const count = useSelector(state => state.count);
+  const count = useSelector(state => state.index.count);
   const dispatch = useDispatch();
 
   return (

@@ -2,11 +2,11 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunkMiddleware from "redux-thunk";
 
-import index from "./modules/index";
+import index from "./modules";
 
 export function initializeStore(initialState) {
   return createStore(
-    combineReducers(index),
+    combineReducers({ index }),
     initialState,
     composeWithDevTools(applyMiddleware(thunkMiddleware))
   );

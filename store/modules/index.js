@@ -11,31 +11,6 @@ export const actionTypes = {
   RESET: "RESET"
 };
 
-// REDUCERS
-export default index = (state = exampleInitialState, action) => {
-  switch (action.type) {
-    case actionTypes.TICK:
-      return Object.assign({}, state, {
-        lastUpdate: action.ts,
-        light: !!action.light
-      });
-    case actionTypes.INCREMENT:
-      return Object.assign({}, state, {
-        count: state.count + 1
-      });
-    case actionTypes.DECREMENT:
-      return Object.assign({}, state, {
-        count: state.count - 1
-      });
-    case actionTypes.RESET:
-      return Object.assign({}, state, {
-        count: exampleInitialState.count
-      });
-    default:
-      return state;
-  }
-};
-
 // ACTIONS
 export const serverRenderClock = isServer => dispatch => {
   return dispatch({ type: actionTypes.TICK, light: !isServer, ts: Date.now() });
@@ -58,3 +33,28 @@ export const decrementCount = () => {
 export const resetCount = () => {
   return { type: actionTypes.RESET };
 };
+
+// REDUCERS
+export default function index(state = exampleInitialState, action) {
+  switch (action.type) {
+    case actionTypes.TICK:
+      return Object.assign({}, state, {
+        lastUpdate: action.ts,
+        light: !!action.light
+      });
+    case actionTypes.INCREMENT:
+      return Object.assign({}, state, {
+        count: state.count + 1
+      });
+    case actionTypes.DECREMENT:
+      return Object.assign({}, state, {
+        count: state.count - 1
+      });
+    case actionTypes.RESET:
+      return Object.assign({}, state, {
+        count: exampleInitialState.count
+      });
+    default:
+      return state;
+  }
+}

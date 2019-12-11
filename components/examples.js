@@ -3,8 +3,8 @@ import Clock from "./clock";
 import Counter from "./counter";
 
 export default () => {
-  const lastUpdate = useSelector(state => state.lastUpdate);
-  const light = useSelector(state => state.light);
+  const lastUpdate = useSelector(state => state.index.lastUpdate);
+  const light = useSelector(state => state.index.light);
 
   return (
     <div>
