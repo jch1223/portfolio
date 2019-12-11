@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jch1223/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jch1223/portfolio/issues"
+  },
+  "homepage": "https://github.com/jch1223/portfolio#readme",
+  "dependencies": {
+    "next": "^9.1.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
