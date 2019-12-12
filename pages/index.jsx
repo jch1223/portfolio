@@ -3,6 +3,13 @@ import { connect } from "react-redux";
 import { startClock, serverRenderClock } from "../store/modules";
 import Examples from "../components/examples";
 
+import styled from "styled-components";
+
+const Title = styled.h1`
+  font-size: 50px;
+  color: ${({ theme }) => theme.colors.primary};
+`;
+
 class Index extends React.Component {
   static getInitialProps({ reduxStore, req }) {
     const isServer = !!req;
@@ -22,7 +29,12 @@ class Index extends React.Component {
   }
 
   render() {
-    return <Examples />;
+    return (
+      <>
+        <Title>page</Title>
+        <Examples />
+      </>
+    );
   }
 }
 
